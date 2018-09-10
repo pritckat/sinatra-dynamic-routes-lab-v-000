@@ -36,15 +36,17 @@ class App < Sinatra::Base
     number1 = params[:number1].to_i
     number2 = params[:number2].to_i
 
+    answer = 'Unable to perform this operation'
+
     case params[:operation]
     when 'add'
-      answer = number1 + number2
+      answer = (number1 + number2).to_s
     when 'subtract'
-      answer = number1 - number2
+      answer = (number1 - number2).to_s
     when 'multiply'
-      answer = number1 * number2
+      answer = (number1 * number2).to_s
     when 'divide'
-      answer = number / number2
+      answer = (number / number2).to_s
     end
     answer
 
